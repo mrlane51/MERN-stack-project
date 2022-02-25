@@ -1,0 +1,29 @@
+{
+  "name": "solo_pkg",
+  "version": "1.0.0",
+  "description": "first full stack project solo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrlane51/MERN-stack-project.git"
+  },
+  "author": "mrlane51",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrlane51/MERN-stack-project/issues"
+  },
+  "homepage": "https://github.com/mrlane51/MERN-stack-project#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "find-config": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.2.3",
+    "nodemon": "^2.0.15",
+    "utils": "^0.3.1"
+  }
+}
