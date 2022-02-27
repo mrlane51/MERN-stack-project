@@ -9,12 +9,16 @@ const addressSchema= new mongoose.Schema({
 
 // userSchema collection object with fields for the document
 const userSchema = new mongoose.Schema({
-    // fields aka key: value pairs
-    name: String,
+    name: {
+        type: String,
+        required: true
+    },
     jobTitle: String,
-    email: String,
+    email: {
+        type: String,
+        lowercase: true},
     // reference to another user object
-    department: mongoose.SchemaTypes.ObjectId,
+    department: String,
     // array of strings
     groups: [String],
     // nested array of objects
@@ -23,7 +27,12 @@ const userSchema = new mongoose.Schema({
         afternoon: Boolean,
         overnight: Boolean,
     },
-    address: addressSchema
+    createdAt: {
+        immutable: true,
+        type: Date,
+        default: () => Date.now(),
+    },
+    // address: addressSchema
 })
 
 // model for user documents in our userSchema collection
