@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const User = require('./User')
+const User = require('./models/user')
 
 mongoose.connect('mongodb://localhost/merndb', () => {
     console.log('connected')
@@ -27,6 +27,7 @@ async function run() {
     }
 }
 run()
+
 
 // Router.get('/findall', (req, res) => {
 //     User.find({}, (err, result) => {
